@@ -25,6 +25,11 @@ const Navbar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
+            <NavMenu onClick={handleClick}>
+                <NavItem>
+                    <NavLinks to='/'>Home</NavLinks>
+                </NavItem>
+            </NavMenu>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
