@@ -1,10 +1,17 @@
 import React from "react";
-import {Nav} from "./Navbar.style";
+import {Nav, NavbarContainer} from "./Navbar.style";
 
 const Navbar = () => {
   return (
     <>
-      <Nav>TEST</Nav>
+      <Nav>
+          <NavbarContainer>
+              <LawLogo to="/">
+                  <LawIcon />
+                  GM & PARTNERS
+              </LawLogo>
+          </NavbarContainer>
+      </Nav>
     </>
   );
 };

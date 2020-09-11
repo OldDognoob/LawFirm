@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Container} from '../../globalStyles';
 
 export const Nav = styled.nav`
   background: #101522;
@@ -10,4 +11,12 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+`;
+
+export const NavbarContainer = styled(Container)`
+display: flex;
+justify-content: space-between;
+height: 80px;
+
+${Container}
 `;
