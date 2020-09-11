@@ -55,18 +55,13 @@ function Navbar() {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/people' onClick={closeMobileMenu}>
-                  People
+              <NavLinks to='/about-us' onClick={closeMobileMenu}>
+                  About Us
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to='/services' onClick={closeMobileMenu}>
                   Services
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/about-us' onClick={closeMobileMenu}>
-                  About Us
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
