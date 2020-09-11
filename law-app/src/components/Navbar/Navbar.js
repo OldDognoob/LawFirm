@@ -4,7 +4,7 @@ import {Nav} from "./Navbar.style";
 const Navbar = () => {
   return (
     <>
-      <Navbar>test</Navbar>
+      <Nav>TEST</Nav>
     </>
   );
 };
