@@ -50,18 +50,23 @@ function Navbar() {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/" onClick={closeMobileMenu}>
+                <NavLinks to='/' onClick={closeMobileMenu}>
                   Home
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/services" onClick={closeMobileMenu}>
-                 People
+                <NavLinks to='/people' onClick={closeMobileMenu}>
+                  People
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/products" onClick={closeMobileMenu}>
-                  Service
+                <NavLinks to='/services' onClick={closeMobileMenu}>
+                  Services
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/about-us' onClick={closeMobileMenu}>
+                  About Us
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
