@@ -1,12 +1,14 @@
 import React from 'react';
 import { InfoSection} from '../../components';
-import { homeObjOne, homeObjThree } from './Info';
+import {homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from './Info';
 
 function Services() {
   return (
     <>
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjThree} />
+      <InfoSection {...homeObjTwo} />
+      <InfoSection {...homeObjFour} />
     </>
   );
 }
