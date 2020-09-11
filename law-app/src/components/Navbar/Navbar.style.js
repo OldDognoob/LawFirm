@@ -36,3 +36,22 @@ export const LawLogo = styled(Link)`
 export const LawIcon = styled(FaBalanceScale)`
   margin-right: 0.5rem;
 `;
+
+export const MobileIcon = styled.div`
+/* display: none; */
+font-size:2rem;
+cursor: pointer;
+align-items: center;
+display:grid;
+
+
+@media screen and (max-width: 960px){
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate()(-100%, 60%);
+    font-size: 2rem;
+    cursor: pointer;
+}
+`;
