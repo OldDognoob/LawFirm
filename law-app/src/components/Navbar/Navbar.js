@@ -1,16 +1,16 @@
 import React from "react";
-import {Nav, NavbarContainer} from "./Navbar.style";
+import { Nav, NavbarContainer, LawLogo, LawIcon } from "./Navbar.style";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-          <NavbarContainer>
-              <LawLogo to="/">
-                  <LawIcon />
-                  GM & PARTNERS
-              </LawLogo>
-          </NavbarContainer>
+        <NavbarContainer>
+          <LawLogo to="/">
+            <LawIcon />
+            GM & PARTNERS
+          </LawLogo>
+        </NavbarContainer>
       </Nav>
     </>
   );
