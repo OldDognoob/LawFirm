@@ -23,7 +23,7 @@ export default function Form() {
           <label htmlFor="email">Email</label>
           <input
             name="email"
-            placeholder="bluebill1049@hotmail.com"
+            placeholder="email"
             type="email"
             ref={register}
           />

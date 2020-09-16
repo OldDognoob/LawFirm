@@ -26,7 +26,7 @@ function InfoSection({
   img,
   alt,
   imgStart,
-  start,
+  start
 }) {
   return (
     <>
