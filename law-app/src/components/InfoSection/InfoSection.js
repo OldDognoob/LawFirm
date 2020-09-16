@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Button } from "../../globalStyles";
+import { Container, Button, Form } from "../../globalStyles";
 import {
   InfoSec,
   InfoRow,
@@ -38,7 +38,7 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to="/sign-up">
+                <Link to="/contact-us">
                   <Button big fontBig primary={primary}>
                     {buttonLabel}
                   </Button>
