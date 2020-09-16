@@ -2,7 +2,7 @@ import React from 'react';
 import { InfoSection } from '../../components';
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour} from './Info';
 
-function ContactUs() {
+function AboutUs() {
   return (
     <>
       <InfoSection {...homeObjOne} />
@@ -13,4 +13,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default AboutUs;
