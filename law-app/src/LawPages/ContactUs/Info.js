@@ -1,49 +1,40 @@
-import React, { Form } from "react";
-import Column from "../layouts/column";
-import "../layouts/Column.css";
+import React from "react";
+import { useForm } from "react-hook-form";
 
-export const Contact = {
-  render() {
-    return (
-      <Form>
-        <Column
-          title="Contact Us"
-          desc="If you need any further legal advice please leave your message & we will soon reach back to you."
-          bg="#007476"
-        />
-        <div className="formGridContainer">
-          <div className="formContainer">
-            <form>
-              <label for="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
+export default function Form() {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = data => {
+    alert(JSON.stringify(data));
+  };
 
-              <label for="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
-              <label for="subject">Subject</label>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-                style={{ height: "200px" }}
-              ></textarea>
-
-              <input type="submit" value="Submit" />
-            </form>
-          </div>
+  return (
+    <div className="Contact">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label htmlFor="firstName">First Name</label>
+          <input name="firstName" placeholder="bill" ref={register} />
         </div>
-      </Form>
-    );
-  },
-};
 
-export default Contact;
+        <div>
+          <label htmlFor="lastName">Last Name</label>
+          <input name="lastName" placeholder="luo" ref={register} />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            placeholder="bluebill1049@hotmail.com"
+            type="email"
+            ref={register}
+          />
+        </div>
+        <label>Query</label>
+        <input
+        name="Query"
+        ref={register({ required: true, maxLength: 200})}
+      />
+        <input type="submit" />
+      </form>
+    </div>
+  );
+}

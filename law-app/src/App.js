@@ -3,7 +3,7 @@ import GlobalStyle from './globalStyles';
 import Home from './LawPages/HomePage/Home';
 import Services from './LawPages/Service/Service';
 import AboutUs from './LawPages/AboutUs/AboutUs';
-import ContactUs from './LawPages/ContactUs/ContactUs';
+import ContactUs from './LawPages/ContactUs/Info';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { Navbar, Footer } from './components';
