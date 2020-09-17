@@ -56,7 +56,7 @@ function Footer() {
                 name="Query"
                 ref={register({ required: true, maxLength: 200 })}
               />
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Submit Query</Button>
             </form>
           </div>
         </Form>

@@ -9,6 +9,7 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 `;
 
 export const FooterSubscription = styled.section`
@@ -35,6 +36,7 @@ export const FooterSubText = styled.p`
 `;
 
 export const Form = styled.form`
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,6 +46,7 @@ export const Form = styled.form`
   font-weight: 100;
   color: white;
   text-align: center;
+  padding: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(79, 98, 148);
   @media screen and (max-width: 820px) {
@@ -52,24 +55,28 @@ export const Form = styled.form`
   }
 `;
 export const FormLabel = styled.div`
-  line-height: 2;
+  line-height: 3;
   text-align: left;
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   margin-top: 20px;
   color: white;
   font-size: 14px;
   font-weight: 200;
+  color: white;
 `;
 
 export const FormInput = styled.input`
+  padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
+  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   padding: 10px 20px;
   border-radius: 2px;
-  margin-right: 10px;
   outline: none;
   border: none;
   font-size: 16px;
   border: 1px solid #fff;
+  margin-bottom: 10px;
+  font-size: 14px;
   &::placeholder {
     color: #242424;
   }
@@ -181,10 +188,7 @@ export const SocialIconLink = styled.a`
 export const Button = styled.button`
   display: block;
   box-sizing: border-box;
-  width: 100%;
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-bottom: 10px;
+  border-radius: 2px;
   font-size: 12px;
   background: ${({ primary }) => (primary ? '#4B59F7' : '#0467FB')};
   color: white;
@@ -192,15 +196,18 @@ export const Button = styled.button`
   text-transform: uppercase;
   border: none;
   margin-top: 20px;
-  padding: 20px;
   font-size: 16px;
   font-weight: 100;
   letter-spacing: 10px;
+  outline: none;
+  border: none;
+  padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
+  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   cursor: pointer;
   &:hover {
     transition: all 0.3s ease-out;
     background: #fff;
-    background-color: ${({ primary }) => (primary ? '#0467FB' : '#4B59F7')};
+    background-color: ${({ primary }) => (primary ? '#0467FB' : '#EC5990')};
   }
   @media screen and (max-width: 960px) {
     width: 100%;
