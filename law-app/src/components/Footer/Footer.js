@@ -1,12 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-// import { Button } from "../../globalStyles";
+import { Button } from "../Footer/Footer.style";
 import { FaFacebook } from "react-icons/fa";
 import {
   FooterContainer,
   FooterSubscription,
   Form,
   FormInput,
+  FormLabel,
   FooterLinksContainer,
   FooterLinksWrapper,
   FooterLinkItems,
@@ -22,50 +23,49 @@ import {
 } from "./Footer.style";
 
 function Footer() {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    alert(JSON.stringify(data));
   };
-
-  console.log(watch("query"));
 
   return (
     <FooterContainer>
       <FooterSubscription>
         <Form>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-              <label htmlFor="firstName">First Name</label>
-              <input name="firstName" placeholder="" ref={register} />
-            </div>
-
-            <div>
-              <label htmlFor="lastName">Last Name</label>
-              <input name="lastName" placeholder="" ref={register} />
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                name="email"
-                placeholder=""
-                type="email"
-                ref={register}
+          <div className="Contact">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div>
+                <FormLabel htmlFor="firstName">First Name</FormLabel>
+                <FormInput name="firstName" placeholder="" ref={register} />
+              </div>
+              <div>
+                <FormLabel htmlFor="lastName">Last Name</FormLabel>
+                <FormInput name="lastName" placeholder="" ref={register} />
+              </div>
+              <div>
+                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormInput
+                  name="email"
+                  placeholder=""
+                  type="email"
+                  ref={register}
+                />
+              </div>
+              <FormLabel>Query</FormLabel>
+              <FormInput
+                name="Query"
+                ref={register({ required: true, maxLength: 200 })}
               />
-            </div>
-            <label>Query</label>
-            <input
-              name="Query"
-              ref={register({ required: true, maxLength: 200 })}
-            />
-            <input type="submit" />
-          </form>
+              <Button type="submit" />
+            </form>
+          </div>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer>
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/sign-up">Contact with Us</FooterLink>
+            <FooterLink to="/sign-up">Policy</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
@@ -81,6 +81,9 @@ function Footer() {
           <FooterLinkItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
             <FooterLink to="/">Facebook</FooterLink>
+            <FooterLink to="/">Twitter</FooterLink>
+            <FooterLink to="/">Instagram</FooterLink>
+            <FooterLink to="/">LawPost</FooterLink>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>

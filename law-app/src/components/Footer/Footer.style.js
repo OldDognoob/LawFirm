@@ -38,10 +38,28 @@ export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #0e101c;
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
   @media screen and (max-width: 820px) {
     flex-direction: column;
     width: 80%;
   }
+`;
+export const FormLabel = styled.div`
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
 `;
 
 export const FormInput = styled.input`
@@ -54,6 +72,9 @@ export const FormInput = styled.input`
   border: 1px solid #fff;
   &::placeholder {
     color: #242424;
+  }
+  &::disabled {
+    opacity:0.4;
   }
   @media screen and (max-width: 820px) {
     width: 100%;
@@ -155,4 +176,33 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
+`;
+
+export const Button = styled.button`
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background: ${({ primary }) => (primary ? '#4B59F7' : '#0467FB')};
+  color: white;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    background-color: ${({ primary }) => (primary ? '#0467FB' : '#4B59F7')};
+  }
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
